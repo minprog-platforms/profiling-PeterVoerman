@@ -7,7 +7,7 @@ class Sudoku:
     """A mutable sudoku puzzle."""
 
     def __init__(self, puzzle: Iterable[Iterable]):
-        self._grid: list[list[int]] = np.ndarray((9, 9))
+        self._grid = np.ndarray((9, 9))
 
         i = 0
         for puzzle_row in puzzle:        
