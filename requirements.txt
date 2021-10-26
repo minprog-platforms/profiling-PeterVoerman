@@ -2,3 +2,4 @@ pytest
 snakeviz
 mypy
 flake8
+numpy
