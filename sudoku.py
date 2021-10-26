@@ -1,7 +1,6 @@
 from __future__ import annotations
 from typing import Iterable, Sequence
 import numpy as np
-from numpy.core.numeric import count_nonzero
 
 class Sudoku:
     """A mutable sudoku puzzle."""
