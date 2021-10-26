@@ -6,7 +6,7 @@ class Sudoku:
     """A mutable sudoku puzzle."""
 
     def __init__(self, puzzle: Iterable[Iterable]):
-        self._grid = np.ndarray((9, 9))
+        self._grid: np.ndarray = np.ndarray((9, 9))
 
         i = 0
         for puzzle_row in puzzle:        
@@ -29,7 +29,7 @@ class Sudoku:
 
     def options_at(self, x: int, y: int) -> Sequence[int]:
         """Returns all possible values (options) at x,y."""
-        options = set([1, 2, 3, 4, 5, 6, 7, 8, 9])
+        options = [1, 2, 3, 4, 5, 6, 7, 8, 9]
         
         # Remove all values from the row
         for value in self.row_values(y):
@@ -92,7 +92,7 @@ class Sudoku:
         Returns True if and only if all rows, columns and blocks contain
         only the numbers 1 through 9. False otherwise.
         """
-        values = set([1, 2, 3, 4, 5, 6, 7, 8, 9])
+        values = [1, 2, 3, 4, 5, 6, 7, 8, 9]
         
         for i in range(9):
             column_values = self.column_values(i)
